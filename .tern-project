@@ -1,0 +1,12 @@
+{
+  "libs": [
+    "browser",
+    "ecma6",
+    "jquery"
+  ],
+  "plugins": {
+    "node": {},
+    "angular": {},
+    "complete_strings": {}
+  }
+}
