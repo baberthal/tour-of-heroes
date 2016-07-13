@@ -1,6 +1,6 @@
 import {RouterConfig, provideRouter} from '@angular/router';
 
-import {DashboardComponent, HeroesComponent} from './components';
+import {DashboardComponent, HeroDetailComponent, HeroesComponent} from './components';
 
 const routes: RouterConfig = [
   {
@@ -10,6 +10,10 @@ const routes: RouterConfig = [
   {
     path: 'dashboard',
     component: DashboardComponent,
+  },
+  {
+    path: 'detail/:id',
+    component: HeroDetailComponent,
   },
   {
     path: '',
