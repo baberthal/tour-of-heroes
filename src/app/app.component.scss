@@ -1,0 +1,16 @@
+@import 'app.component.variables';
+@import '~bootstrap/scss/bootstrap';
+
+h2.hero-heading {
+  color: #444;
+  font-weight: lighter;
+  margin-top: 10px;
+}
+
+h1 {
+  color: #369;
+}
+
+body {
+  margin: 2em;
+}

@@ -8,7 +8,7 @@ import {HeroService} from './services';
 @Component({
   selector: 'hero-app',
   templateUrl: './app.component.html',
-  styles: [String(require('../global.scss'))],
+  styles: [String(require('./app.component.scss'))],
   directives: [ROUTER_DIRECTIVES],
   providers: [HeroService],
   encapsulation: ViewEncapsulation.None,
