@@ -1,19 +1,14 @@
 <div class="row">
-  <h1 class="text-center">{{title}}</h1>
-</div>
-
-<div class="row">
-
   <div class="col-md-4">
-    <div class="panel panel-default">
-      <div class="panel-heading"> <h2 class="hero-heading">My Heroes</h2></div>
-      <div class="list-group">
+    <div class="card">
+      <div class="card-header"> <h2 class="hero-heading">My Heroes</h2></div>
+      <div class="list-group list-group-flush">
         <button *ngFor="let hero of heroes"
           type="button"
           class="list-group-item"
           [class.active]="hero === selectedHero"
           (click)="onSelect(hero)">
-          <span class="badge">{{hero.id}}</span>
+          <span class="label label-pill label-info">{{hero.id}}</span>
           {{hero.name}}
         </button>
       </div>
@@ -21,7 +16,10 @@
   </div>
 
   <div class="col-md-8">
-    <hero-detail [hero]="selectedHero"></hero-detail>
+    <div *ngIf="selectedHero">
+      <h2 class="display-3 hero-heading">{{selectedHero.name | uppercase}} is my hero</h2>
+      <button class="btn btn-info" (click)="gotoDetail()">View Details</button>
+    </div>
   </div>
 </div>
 
