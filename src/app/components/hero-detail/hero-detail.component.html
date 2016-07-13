@@ -1,0 +1,29 @@
+<div class="panel panel-default" *ngIf="hero">
+  <div class="panel-heading">
+    <h2 class="hero-heading">{{hero.name}} details!</h2>
+  </div>
+
+  <br />
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="input-group">
+        <span class="input-group-addon" id="hero-id-addon">id</span>
+        <input type="text" value="{{hero.id}}" class="form-control" id="hero-id" disabled>
+      </div>
+    </div>
+  </div>
+
+  <br />
+
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="input-group">
+        <span class="input-group-addon" id="hero-name-addon">name</span>
+        <input [(ngModel)]="hero.name" placeholder="name" class="form-control"/>
+      </div>
+    </div>
+  </div>
+
+  <br />
+</div>

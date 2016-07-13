@@ -1,0 +1,27 @@
+<div class="row">
+  <h1 class="text-center">{{title}}</h1>
+</div>
+
+<div class="row">
+
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading"> <h2 class="hero-heading">My Heroes</h2></div>
+      <div class="list-group">
+        <button *ngFor="let hero of heroes"
+          type="button"
+          class="list-group-item"
+          [class.active]="hero === selectedHero"
+          (click)="onSelect(hero)">
+          <span class="badge">{{hero.id}}</span>
+          {{hero.name}}
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-8">
+    <hero-detail [hero]="selectedHero"></hero-detail>
+  </div>
+</div>
+
