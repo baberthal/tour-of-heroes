@@ -1,11 +1,18 @@
 <div class="row">
-   <h3>Top Heroes</h3>
+   <div class="col-sm-12">
+      <h3 class="hero-heading display-3 text-xs-center">Top Heroes</h3>
+   </div>
 </div>
+
+<br />
+
 <div class="row">
-   <div class="grid grid-pad">
-      <div *ngFor="let hero of heroes" (click)="gotoDetail(hero)" class="col-1-4">
-         <div class="module hero">
-            <h4>{{hero.name}}</h4>
+   <div class="col-sm-12">
+      <div class="card-deck-wrapper">
+         <div class="card-deck">
+            <div class="card hero-card card-block card-inverse card-primary text-xs-center" *ngFor="let hero of heroes" (click)="gotoDetail(hero)" >
+               <h4 class="card-title">{{hero.name}}</h4>
+            </div>
          </div>
       </div>
    </div>

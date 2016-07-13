@@ -1,0 +1,14 @@
+@import '../../app.component.variables';
+
+h4 {
+  position: relative;
+}
+
+.hero-card {
+  min-height: 120px;
+  &:hover {
+    background-color: $brand-info;
+    cursor: pointer;
+    color: $brand-primary;
+  }
+}
